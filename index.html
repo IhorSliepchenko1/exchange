@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <title>Exchange</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="info">
+        <label for="date">
+          <p>Введіть дату</p>
+          <input type="date" name="date" id="inpDate" />
+        </label>
+        <button onclick="onButton()">Отримати</button>
+      </section>
+      <section class="select-container">
+        <div class="slot-conv">
+          <div class="convert">
+            <label for="from">Конвертувати З:</label>
+            <select name="from" id="from">
+              <option value="-">---</option>
+            </select>
+          </div>
+          <button onclick="convert()">Конвертувати</button>
+          <div class="convert">
+            <label for="to">Конвертувати В:</label>
+            <select name="to" id="to">
+              <option value="-">---</option>
+            </select>
+          </div>
+        </div>
+        <input type="number" id="total" />
+      </section>
+      <table>
+        <thead>
+          <tr>
+            <td id="r030">
+              r030
+              <span class="material-icons">
+                swap_vert
+              </span>
+            </td>
+            <td id="txt">
+              txt
+              <span class="material-icons">
+                swap_vert
+              </span>
+            </td>
+            <td id="rate">
+              rate
+              <span class="material-icons">
+                swap_vert
+              </span>
+            </td>
+            <td id="cc">
+              cc
+              <span class="material-icons">
+                swap_vert
+              </span>
+            </td>
+            <td>exchangedate</td>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
