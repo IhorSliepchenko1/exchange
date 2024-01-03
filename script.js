@@ -28,7 +28,7 @@ function renderData(data) {
     row.innerHTML = `
       <td>${item.r030}</td>
       <td>${item.txt}</td>
-      <td>${item.rate.toFixed(2)}</td>
+      <td>${item.rate.toFixed(2)} UAH</td>
       <td>${item.cc}</td>
       <td>${item.exchangedate}</td>
     `;
