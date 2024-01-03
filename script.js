@@ -78,7 +78,7 @@ function renderoptionSelecFtrom(data) {
     const optionSelectTo = document.createElement('option');
 
     optionSelectFrom.innerHTML = `
-    <option value="${item.rate}" name="${item.txt}">${item.txt} ≈ ${item.rate.toFixed(1)}</option>
+    <option value="${item.rate}" name="${item.txt}">${item.txt} ≈ ${item.rate.toFixed(1)} UAH</option>
     `;
 
     optionSelectTo.innerHTML = `
