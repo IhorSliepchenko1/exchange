@@ -7,9 +7,12 @@ function onButton() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      localStorage.setItem('exchangeData', JSON.stringify(data));
       productsData = data;
       renderData(productsData);
       renderoptionSelecFtrom(productsData)
+     localStorage.getItem(data);
+
     })
     .catch(error => {
       console.error('Произошла ошибка:', error);
@@ -82,7 +85,7 @@ function renderoptionSelecFtrom(data) {
     `;
 
     optionSelectTo.innerHTML = `
-    <option value="${item.rate}" name="${item.txt}">${item.txt} ≈ ${item.rate.toFixed(1)}</option>
+    <option value="${item.rate}" name="${item.txt}">${item.txt} ≈ ${item.rate.toFixed(1)} UAH</option>
     `;
     from.appendChild(optionSelectFrom);
     to.appendChild(optionSelectTo);
@@ -103,3 +106,4 @@ function convert() {
 
   return totalInput
 }
+
